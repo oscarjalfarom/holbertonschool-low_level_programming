@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Check if the $CFILE variable is defined
+if [[ -z "$CFILE" ]]; then
+    echo "The environment variable \$CFILE is not defined."
+    exit 1
+fi
+
+# Run the preprocessor on the C file and save the result in a temporary file
+gcc -E "$CFILE" -o temp.c
+
+# Check if there were any errors during preprocessing
+if [[ $? -ne 0 ]]; then
+    echo "There was an error during preprocessing of the C file."
+    exit 1
+fi
+
+# Save the result in the final file
+mv temp.c c
+
+echo "Preprocessing of the C file is complete, and the result has been saved in the 'c' file."
