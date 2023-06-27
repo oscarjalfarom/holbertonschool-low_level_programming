@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 #include "main.h"
 
@@ -8,10 +10,10 @@
  */
 int main(void)
 {
-	char word[8] = "_putchar";
+	char word[] = "_putchar";
 	int x;
 
-	for (x = 0; x < 8; x++)
+	for (x = 0; x < 7; x++)
 		_putchar(word[x]);
 	_putchar('\n');
 	return (0);
