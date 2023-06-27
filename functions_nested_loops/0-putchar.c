@@ -10,11 +10,6 @@
  */
 int main(void)
 {
-	char word[] = "_putchar";
-	int x;
-
-	for (x = 0; x < 7; x++)
-		_putchar(word[x]);
-	_putchar('\n');
+  printf("_putchar\n");
 	return (0);
 }
