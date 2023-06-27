@@ -10,12 +10,13 @@
  */
 void print_alphabet(void)
 {
-	char c;
+    char letra = 'a';
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
+    while (letra <= 'z')
+    {
+        _putchar(letra);
+        letra++;
+    }
 
-	_putchar('\n');
+    _putchar('\n');
 }
