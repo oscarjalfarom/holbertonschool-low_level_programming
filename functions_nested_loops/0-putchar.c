@@ -1,15 +1,18 @@
+#include <unistd.h>
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char word[8] = "_putchar";
+	int x;
 
-return (0);
+	for (x = 0; x < 8; x++)
+		_putchar(word[x]);
+	_putchar('\n');
+	return (0);
 }
