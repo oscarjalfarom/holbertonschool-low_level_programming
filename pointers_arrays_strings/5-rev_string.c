@@ -1,23 +1,23 @@
 #include "main.h"
-
 /**
- *string_toupper- gets users input
- *@t: strores users input
- *Return: results
+ *rev_string - reversing string
+ *
+ *@s: string to be reversed
+ *
  */
-
-char *string_toupper(char *t)
+void rev_string(char *s)
 {
+	int a = 0, b;
+	char c;
 
-	int x = 0;
-
-	while (t[x] != '\0')
+	while (s[a])
 	{
-		if (t[x] >= 'a' && t[x] <= 'z')
-		{
-			t[x] = t[x] - 32;
-		}
-		x++;
+		a++;
 	}
-	return (t);
-}
+
+	for (b = 0; b < a--; b++)
+	{
+		c = s[a];
+		s[a] = s[b];
+		s[b] = c;
+	}
