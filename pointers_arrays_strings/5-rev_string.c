@@ -1,22 +1,23 @@
 #include "main.h"
-#include <string.h>
-/**
-  ** rev_string - invert a string
-  ** @s: pointer to string
-  ** return: 0
-  **/
-void rev_string(char *s)
-{
-	int length = strlen(s);
-	char *start = s;
-	char *end = s + length - 1;
 
-	while (start < end)
+/**
+ *string_toupper- gets users input
+ *@t: strores users input
+ *Return: results
+ */
+
+char *string_toupper(char *t)
+{
+
+	int x = 0;
+
+	while (t[x] != '\0')
+	{
+		if (t[x] >= 'a' && t[x] <= 'z')
 		{
-			char temp = *start;
-			*start = *end;
-			*end = temp;
-			start++;
-			end--;
+			t[x] = t[x] - 32;
 		}
+		x++;
+	}
+	return (t);
 }
