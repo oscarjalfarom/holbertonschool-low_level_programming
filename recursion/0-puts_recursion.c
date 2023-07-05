@@ -1,17 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-  ** reset_to_98 - Updates the pointer value to 98
-  **@n: The pointer to update
-  **Return: 0
-  **/
-
+ * _puts_recursion - Entry Point
+ *@s: input
+ *Return: Always 0 success
+ */
 void _puts_recursion(char *s)
 {
-  if ((*s) != '\0'){
-    _putchar(*s);
-    s = s + 1:
-    _puts_recursion(s);
-  }
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
