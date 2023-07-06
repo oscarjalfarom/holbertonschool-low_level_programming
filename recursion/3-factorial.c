@@ -3,7 +3,7 @@
  * Auth: Oscar J Alfaro M
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * factorial - Returns the factorial of a given number.
