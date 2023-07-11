@@ -1,9 +1,9 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 /*
- * File: main.h
- * Auth: Oscar J Alfaro M
+ * File: holberton.h
+ * Auth: Brennan D Baraban
  * Desc: Header file containing the prototypes of all functions
  *       included in the static library libholberton.a.
  */
