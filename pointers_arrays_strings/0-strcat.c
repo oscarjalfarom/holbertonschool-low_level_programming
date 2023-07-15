@@ -1,26 +1,27 @@
+/*
+ * File: 0-strcat.c
+ * Auth: Oscar J Alfaro M
+ */
+
 #include "main.h"
-#include <stdio.h>
+
 /**
- ** reset_to_98 - Updates the pointer value to 98
- **@n: The pointer to update
- **Return: 0
- **/
-
-char *_strcat(char *dest, char *src)
+ * strcat - Concatenates the string pointed to by @src, including the terminating
+ *          null byte, to the end of the string pointed to by @dest.
+ * @dest: A pointer to the string to be concatenated upon.
+ * @src: The source string to be appended to @dest.
+ *
+ * Return: A pointer to the destination string @dest.
+ */
+char *strcat(char *dest, const char *src)
 {
-    char *ptr = dest;
+	int index = 0, dest_len = 0;
 
-    while (*ptr != '\0') {
-        ptr++;
-    }
+	while (dest[index++])
+		dest_len++;
 
-    while (*src != '\0') {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
-    *ptr = '\0';
-
-    return dest;
+	return (dest);
 }
