@@ -1,20 +1,28 @@
 #ifndef DOG_H
 #define DOG_H
 
-/**
- * struct dog - Defines a structure to represent information about a dog
- * @name: Name of the dog (string of characters)
- * @age: Age of the dog (floating-point number)
- * @owner: Name of the dog's owner (string of characters)
- *
- * Description: This structure represents basic information about a dog,
- * including its name, age, and the name of its owner.
+/*
+ * File: dog.h
+ * Auth: Oscar J Alfaro M
+ * Desc: Header file that defines a new type struct dog.
  */
-typedef struct dog
+
+/**
+ * struct dog - A new type describing a dog.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The owner of the dog.
+ */
+struct dog
 {
-	char name[50];
+	char *name;
 	float age;
-	char owner[100];
-} Dog;
+	char *owner;
+};
+
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog dog_t;
 
 #endif
