@@ -8,6 +8,6 @@
  *       that computes the absolute value of a number x.
  */
 
-#define SUM(x, y) ((x)+(y))
+#define SUM(x, y) ((x) + (y))
 
 #endif
